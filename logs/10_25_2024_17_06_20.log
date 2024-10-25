@@ -1,0 +1,4 @@
+[ 2024-10-25 17:06:21,480 ] 24 root - INFO Connected to MongoDB successfully.
+[ 2024-10-25 17:06:21,767 ] 38 root - INFO Converted CSV to JSON with 11055 records.
+[ 2024-10-25 17:06:33,172 ] 50 root - INFO Inserted 11055 records into the MongoDB collection: NetworkData.
+[ 2024-10-25 17:06:34,498 ] 59 root - INFO MongoDB connection closed.

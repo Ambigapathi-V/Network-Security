@@ -1,0 +1,22 @@
+[ 2024-10-26 13:43:49,617 ] 12 root - INFO Initializing training pipeline configuration...
+[ 2024-10-26 13:43:49,617 ] 16 root - INFO Initializing data ingestion configuration...
+[ 2024-10-26 13:43:49,617 ] 21 root - INFO Starting the data ingestion process...
+[ 2024-10-26 13:43:53,166 ] 60 root - INFO Perform train test split on the dataframe
+[ 2024-10-26 13:43:53,167 ] 61 root - INFO Exited split_data_as_train_test method of DataIngestion class
+[ 2024-10-26 13:43:53,167 ] 66 root - INFO Exporting train and test file paths
+[ 2024-10-26 13:43:53,271 ] 80 root - INFO Exported train and test files successfully
+[ 2024-10-26 13:43:53,271 ] 23 root - INFO Data ingestion completed successfully.
+[ 2024-10-26 13:43:53,271 ] 26 root - INFO Initializing data validation configuration...
+[ 2024-10-26 13:43:53,283 ] 31 root - INFO Starting the data validation process...
+[ 2024-10-26 13:43:53,366 ] 35 root - INFO Required number of columns: 31
+[ 2024-10-26 13:43:53,366 ] 36 root - INFO Dataframe has columns: 31
+[ 2024-10-26 13:43:53,366 ] 38 root - INFO Number of columns match.
+[ 2024-10-26 13:43:53,366 ] 35 root - INFO Required number of columns: 31
+[ 2024-10-26 13:43:53,366 ] 36 root - INFO Dataframe has columns: 31
+[ 2024-10-26 13:43:53,366 ] 38 root - INFO Number of columns match.
+[ 2024-10-26 13:43:53,366 ] 52 root - INFO All numerical columns are present.
+[ 2024-10-26 13:43:53,366 ] 52 root - INFO All numerical columns are present.
+[ 2024-10-26 13:43:53,606 ] 131 root - INFO Data validation completed successfully.
+[ 2024-10-26 13:43:53,606 ] 33 root - INFO Data validation completed successfully.
+[ 2024-10-26 13:43:53,606 ] 36 root - INFO Data Ingestion Artifact: DataIngestionArtifact(trained_file_path='Artifacts\\10_26_2024_13_43_47\\ingested\\train.csv', testing_file_path='Artifacts\\10_26_2024_13_43_47\\ingested\\test.csv')
+[ 2024-10-26 13:43:53,606 ] 37 root - INFO Data Validation Artifact: DataValidationArtifact(validation_status=True, valid_train_file_path='Artifacts\\10_26_2024_13_43_47\\train.csv', valid_test_file_path='Artifacts\\10_26_2024_13_43_47\\test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifacts\\10_26_2024_13_43_47\\drift_report\\report.yaml')

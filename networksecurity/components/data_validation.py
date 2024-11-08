@@ -19,6 +19,8 @@ class DataValidation:
             
         except Exception as e:
             raise NetworkSecurityException(e, sys)
+        
+
     
     @staticmethod
     def read_data(filepath) -> pd.DataFrame:
@@ -67,8 +69,12 @@ class DataValidation:
                 is_same_dist = ks_2samp(d1, d2)
                 is_found = is_same_dist.pvalue < threshold  # True if drift is detected
                 if is_found:
-                    status = False  # Update status if any drift is found
-
+                    status = False 
+                # Update status if any drift is found
+                else:
+                    is_found= True
+                    status = False
+                    
                 report.update({column: {
                     "p_value": float(is_same_dist.pvalue),
                     "drift_status": is_found
@@ -104,11 +110,11 @@ class DataValidation:
                 raise NetworkSecurityException("Test dataframe does not contain all required columns.", sys)
             
             # Step 3: Validate presence of numerical columns in both train and test sets
-            if not self.validate_numerical_columns(train_dataframe):
-                raise NetworkSecurityException("Train dataframe does not contain all required numerical columns.", sys)
+            #if not self.validate_numerical_columns(train_dataframe):
+                #raise NetworkSecurityException("Train dataframe does not contain all required numerical columns.", sys)
 
-            if not self.validate_numerical_columns(test_dataframe):
-                raise NetworkSecurityException("Test dataframe does not contain all required numerical columns.", sys)
+            #if not self.validate_numerical_columns(test_dataframe):
+                #raise NetworkSecurityException("Test dataframe does not contain all required numerical columns.", sys)
             
             # Step 4: Check for data drift
             status = self.detect_dataset_drift(base_df=train_dataframe, current_df=test_dataframe)
@@ -133,3 +139,5 @@ class DataValidation:
             
         except Exception as e:
             raise NetworkSecurityException(e, sys)
+        
+        

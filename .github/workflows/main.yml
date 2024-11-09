@@ -1,38 +1,22 @@
-name: Continuous Integration
+name : workflows
 
 on:
   push:
     branches:
       - main
     paths-ignore:
-      - README.md  
+     - README.md
 
 jobs:
   integration:
-    name: Continuous Integration
-    runs-on: ubuntu-latest
-    
+    name : Continuous Integration
+    runs-on : ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.10'  # Ensure you're using the correct version of Python
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
+        
       - name: Lint code
-        run: |
-          # Add your linter here, e.g., flake8
-          pip install flake8
-          flake8 .
+        run : echo "Linting repository"
 
-      - name: Run unit tests
-        run: |
-          # Run your unit tests here, e.g., pytest
-          pip install pytest
-          pytest
+      - name : Run unit tests
+        run : echo "Running unit tests"

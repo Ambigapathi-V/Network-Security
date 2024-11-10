@@ -62,40 +62,76 @@ curl -X 'POST' \
   'http://localhost:8000/predict' \
   -F 'file=@yourfile.csv' 
   ```
+## Screenshots
+
+![App Screenshot](img\image.png)
 
 
-##  Installation
+## Codes and Resources Used
+- **Editor Used:** Visual Studio Code
+- **Python Version :**  3.10
 
-To install and run this project, follow these steps:
+## Python packages Used
+- **FastAPI:** FastAPI is a modern, fast (high-performance), web framework for building
+- **Scikit-learn :** scikit-learn is a machine learning library for Python that provides a wide range of algorithms for classification
+- **Pandas:** The pandas library provides data structures and functions to efficiently handle structured data, including
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Ambigapathi-V/Network-Security
-   ```
-    ```
-   cd network-security-prediction 
-   ```
+- **PyMongo:** PyMongo is a Python driver for MongoDB. It allows Python developers to work with MongoDB using Python.
+- **Uvicorn:** Uvicorn is a lightning-fast ASGI server. It is the
+- **MongoDB:** MongoDB is a NoSQL database that stores data in JSON-like documents.
 
-2. **Set Up a Virtual Environment (Optional but Recommended** 
-    ``` bash
-    python3 -m venv env
-    ```
-    ```
-    source env/bin/activate  # On Windows use `env\Scripts\activate ```
 
-3. **Install Required Packages Install dependencies from the requirements.txt file.**
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Data
 
-4. Run the FastAPI Application Start the FastAPI server.
-    ````bash
-    uvicorn main:app --reload
-    ```
+The data used for traing model was collected udemy Complete machine learning course Krish nailk course.
 
-5. Access the API Documentation Open http://localhost:8000/docs to interact with the API documentation.    
-## Usage/Examples
+## Source Data
+- **Source:**  udemy Complete machine learning course Krish nailk course (https://www.udemy.com/course/machine-learning-and-data-science-with-python/)
+- **Data Type:** CSV
+- **Data Size:** 11000 records
+- **Data Description:** The data contains information about students, including their age, gender, performance etc.
 
+## Data Ingestion
+- **Data Ingestion Method:** Get the data from the MongoDB database and load it into a Pandas DataFrame.
+- **Data Drift** : The data drift is handled by using the concept of data normalization and feature scaling.
+
+## Data Preprocessing
+
+
+  - **Handling Missing Values:** Fill missing values with the mean of the column.
+  - **Handling Categorical Variables:** Convert categorical variables into numerical format using one-hot encoding or label encoding.
+  - **Scaling /Normalizing Features:** Scale/normalize features using StandardScaler or MinMaxScaler.
+  - **Splitting Data:** Split the data into training and testing sets.
+
+## Code Structure
+  ```bash
+  ├── main.py
+  ├── setup.py
+  ├── app.py.py
+  ├── networksecurity
+  │   ├── cloud
+  │   ├── constants
+  │   ├── entity
+  │   ├── logging
+  │   ├── utils
+  │   ├── exception
+  │   ├── config
+  │   ├── components
+  │   │   ├── data_ingestion.py
+  │   │   ├── data_transformation.py
+  │   │   ├── data_validation.py
+  │   │   ├── model_training.py
+  │   ├── Pipeline
+  │   │   ├── data_ingestion_pipeline.py
+  │   │   ├── data_transformation_pipeline.py
+  │   │   ├── data_validation_pipeline.py
+  │   │   ├── model_training_pipeline.py
+  ```
+## Result and Evaluation
+- **Model Evaluation Metrics:** Accuracy, Precision, Recall, F1-score, AUC-ROC, refer dagshub hub for more details.
+link to dagshub - https://dagshub.com/Ambigapathi-V/Network-Security
+
+## Training the Model
 ### Making a Prediction Request
 
 To make a prediction using the API, follow this example:
@@ -153,19 +189,7 @@ Set Up Environment Variables Create a .env file to add your MongoDB URL and othe
 
 
 
-## Optimizations
 
-1. **Efficient Model Loading:** Reduced prediction latency by loading the model and preprocessor once during startup, instead of on each request.
-
-2. **Data Handling:** Optimized memory usage by processing large CSV files in chunks and using vectorized operations for faster feature scaling.
-
-3. **Asynchronous API:** Used FastAPI’s asynchronous capabilities for concurrent prediction handling, improving response times during high traffic.
-
-4. **Database Optimization:** Implemented MongoDB indexing and bulk insertions to speed up database operations and reduce overhead.
-
-5. **Docker Setup:** Streamlined Dockerfile for efficient deployment, minimizing resource usage and ensuring consistent environments.
-
-6. **Security:** Secured sensitive data through environment variables, preventing credential exposure.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -64,7 +64,7 @@ curl -X 'POST' \
   ```
 ## Screenshots
 
-![App Screenshot](img\image.png)
+![App Screenshot](https://github.com/Ambigapathi-V/Network-Security/blob/main/img/image.png)
 
 
 ## Codes and Resources Used

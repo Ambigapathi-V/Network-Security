@@ -1,5 +1,5 @@
 
-![](img\pexels-pixabay-60504.jpg)
+![](https://github.com/Ambigapathi-V/Network-Security/blob/main/img/pexels-pixabay-60504.jpg)
 
 # Network Security Prediction
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Ambigapathi-V/Network-Security?include_prereleases)

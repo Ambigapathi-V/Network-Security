@@ -1,5 +1,14 @@
 
+![](https://github.com/pragyy/datascience-readme-template/blob/main/Headerheader.jpg)
+
 # Network Security Prediction
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Ambigapathi-V/Network-Security?include_prereleases)
+![GitHub last commit](https://img.shields.io/github/last-commit/Ambigapathi-V/Network-Security)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Ambigapathi-V/Network-Security)
+![GitHub](https://img.shields.io/github/license/Ambigapathi-V/Network-Security)
+![contributors](https://img.shields.io/github/contributors/Ambigapathi-V/Network-Security)
+![codesize](https://img.shields.io/github/languages/code-size/Ambigapathi-V/Network-Security)
+
 
 The Network-Security-Prediction project leverages machine learning to predict potential security threats in network traffic. By analyzing network data, the system classifies whether the traffic is normal or potentially malicious, offering valuable insights for organizations looking to safeguard their networks. It uses data preprocessing techniques and a trained model to make predictions based on incoming network traffic data.
 

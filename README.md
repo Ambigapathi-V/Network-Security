@@ -1,5 +1,5 @@
 
-![](https://github.com/pragyy/datascience-readme-template/blob/main/Headerheader.jpg)
+![Network Security Banner](https://raw.githubusercontent.com/Ambigapathi-V/Network-Security/main/image.png)
 
 # Network Security Prediction
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Ambigapathi-V/Network-Security?include_prereleases)

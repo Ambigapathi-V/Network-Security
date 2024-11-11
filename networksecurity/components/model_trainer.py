@@ -34,6 +34,7 @@ class ModelTrainer:
             raise NetworkSecurityException(f"Failed to initialize ModelTrainer: {str(e)}")
         
     def track_mlflow(self,best_model,classification_matrix):
+        
         with mlflow.start_run():
             fl_score = classification_matrix.f1_score
             precision_score = classification_matrix.precision_score
